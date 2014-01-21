@@ -1,0 +1,237 @@
+/**
+ *  METREAUX TABLE . CSS
+ *
+ *  Theme:
+ *     Green Bay Packers - a great original team of the NFL (USA), also the
+ *     color scheme of the now defunct Bentley High School :)
+ *
+ *  Versions:
+ *     0.1 -- 06-December-2013  
+ */
+
+/**
+ *  LESS Constants
+ *  
+ */
+
+@bgColor:         #E3E3E3;
+@primaryColor:    #1E4D2B; /*#006400; /*rgb(25,48,40);*/
+@secondaryColor:  rgb(254,184,28);
+@trimColor:       rgb(0,0,0);
+@stripingColor:   #EFEFEF;
+
+@white:           #FFFFFF;
+@black:           #000000;
+@extraTrim:       #D5D5D5;
+@selection:       #46027F;
+@focus:           #FFFACD; 
+
+body {
+    background: @bgColor url(../img/grey_bg.jpg);
+
+    h1 {
+      color: @primaryColor;
+    }
+
+    h3 {
+      color: @secondaryColor;
+    }    
+
+    .ui.entry {
+        color: @trimColor;
+    }
+
+    .ui.menu.horizontal {
+
+        li, li a {
+          color: @primaryColor;
+          text-decoration: none;
+        }
+
+        li:hover, li a:hover {
+            background-color: @secondaryColor;
+            color: @primaryColor;
+        }
+
+        li.selected, li.selected a {
+            background-color: @primaryColor;
+            color: @white;
+        }
+    }
+
+    .dataTable {
+      border-bottom: 1px solid @primaryColor;
+    }
+
+    .dataTable thead tr {
+      border-bottom: 1px solid @primaryColor;
+      border-top: 1px solid @primaryColor;
+    }
+
+    .dataTables_wrapper .dataTable thead th {
+      background-color: @primaryColor;
+      color: @secondaryColor;
+    }
+
+    .dataTables_filter input,
+    .dataTables_length select {
+      border: 1px solid @primaryColor;
+      color: @primaryColor;
+    }
+
+    .dataTables_filter input:focus,
+    .dataTables_length select:focus {
+      outline: none;
+      background-color: @focus;
+    }
+
+    .dataTables_info,
+    .dataTables_length,
+    .dataTables_filter,
+    .dataTables_paginate {
+      color: @primaryColor;
+    }
+
+    .dataTables_info {
+      border: 1px solid @primaryColor;
+    }
+
+    .cancel-search {
+      border: 1px solid @primaryColor;
+    }
+}
+
+/*  Striping  */
+
+.dataTables_wrapper .dataTable tbody tr.odd {
+  background-color: @white;
+}
+
+.dataTables_wrapper .dataTable tbody tr.even {
+  background-color: @stripingColor;
+}
+
+/*  Sorting  */
+
+.svg {
+  .sorting { }
+  .sorting_asc,
+  .sorting_asc_disabled {
+    background: transparent url(../img/svg/black/sort_asc.svg) 96% center no-repeat;
+    background-size: 20px 15px;
+  }
+  .sorting_desc,
+  .sorting_desc_disabled { 
+    background: transparent url(../img/svg/black/sort_desc.svg) 96% center no-repeat;
+    background-size: 20px 15px;
+  }
+  .sorting_asc,
+  .sorting_desc {
+    background-color: @secondaryColor !important;
+    border-top: 1px solid @secondaryColor !important;
+    border-bottom: 1px solid @secondaryColor !important;
+    color: @black !important;
+  }
+  .sorting_asc_disabled,
+  .sorting_desc_disabled {
+    opacity: .20;
+  }
+}
+
+.dont-use-svg,
+.no-svg {
+  .sorting { }
+  .sorting_asc,
+  .sorting_asc_disabled {
+      background: transparent url(../img/black/up.png) no-repeat center right;
+  }
+
+  .sorting_desc,
+  .sorting_desc_disabled { 
+     background: url(../img/black/down.png) no-repeat center right;
+  }
+  .sorting_asc_disabled,
+  .sorting_desc_disabled {
+    opacity: .20;
+  }
+  .sorting_asc,
+  .sorting_desc {
+    background-color: @secondaryColor !important;
+    border-top: 1px solid @secondaryColor !important;
+    border-bottom: 1px solid @secondaryColor !important;
+    color: @black !important;
+  }
+}
+
+/*   Paging   */
+
+.paging_full_numbers {
+
+  a.paginate_button,
+  a.paginate_active {
+    border: 1px solid @primaryColor;
+    color: @primaryColor;
+  }
+
+  a.paginate_button {
+    background-color: transparent;
+    color: @trimColor;
+  }
+
+  a.paginate_button:hover {
+    background-color: @secondaryColor; 
+    border: 1px solid @secondaryColor; 
+    color: @trimColor;
+    text-decoration: none !important;
+  }
+
+  a.paginate_active {
+    background-color: @primaryColor;
+    border: 1px solid @primaryColor;
+    color: #FFF !important;
+  }
+
+  a.first.paginate_button,
+  a.first.paginate_button_disabled,
+  a.first.paginate_button:hover,
+  a.last.paginate_button,
+  a.last.paginate_button_disabled,
+  a.last.paginate_button:hover,
+  a.previous.paginate_button,
+  a.previous.paginate_button_disabled,
+  a.previous.paginate_button:hover,
+  a.next.paginate_button,
+  a.next.paginate_button_disabled,
+  a.next.paginate_button:hover {    
+    border: 1px solid @primaryColor;
+  }
+
+  a.first.paginate_button:hover,
+  a.last.paginate_button:hover,
+  a.previous.paginate_button:hover,
+  a.next.paginate_button:hover { 
+      background-color: @secondaryColor; 
+      border: 1px solid @secondaryColor; 
+  }
+
+  span  {
+
+    a.paginate_active {      
+      border: 1px solid @primaryColor;
+      color: @white !important;   
+    }
+
+    a.paginate_button {
+      background-color: @bgColor;
+      color: @black !important;  
+    }
+
+    a.paginate_button:hover { 
+      background-color: @secondaryColor;      
+      border: 1px solid @secondaryColor; 
+      color: @trimColor !important;   
+    }
+  }
+
+}
+

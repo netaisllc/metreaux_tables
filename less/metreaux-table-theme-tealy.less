@@ -1,0 +1,247 @@
+/**
+ *  METREAUX TABLE . CSS
+ *
+ *  Theme:
+ *     Default - basic and boring, reminiscent of the Borg
+ *
+ *  Versions:
+ *     0.1 -- 06-December-2013 *    
+ */
+
+/**
+ *  LESS Constants
+ *  
+ */
+
+@bgColor:         rgba(238, 253, 246, .25);
+@primaryColor:    rgb(0, 78, 78);
+@secondaryColor:  rgb(207, 249, 231);
+@trimColor:       rgb(0, 128, 128);
+@stripingColor:   rgba(207, 249, 231, .33);
+
+@white:           #FFFFFF;
+@black:           #000000;
+@extraTrim:       #DADADA;
+@selection:       #000000;
+@focus:           #FFFACD;  
+
+body {
+     background: @bgColor url();
+
+    h1 {
+      color: @primaryColor;
+    }
+
+    h3 {
+      color: @black;
+    }    
+
+    .ui.entry {
+        color: @trimColor;
+    }
+
+    .ui.menu.horizontal {
+
+        li, li a {
+          color: @primaryColor;
+          text-decoration: none;
+        }
+
+        li:hover, li a:hover {
+            background-color: @secondaryColor;
+            color: @primaryColor;
+        }
+
+        li.selected, li.selected a {
+            background-color: @primaryColor;
+            color: @white;
+        }
+    }
+
+    .dataTable {
+      border-bottom: 1px solid @primaryColor;
+    }
+
+    .dataTable thead tr {
+      border-bottom: 1px solid @primaryColor;
+      border-top: 1px solid @primaryColor;
+    }
+
+    .dataTables_wrapper .dataTable thead th {
+      background-color: @white;
+      color: @primaryColor;
+    }
+
+    .dataTables_filter input,
+    .dataTables_length select {
+      border: 1px solid @extraTrim;
+      color: @primaryColor;
+    }
+
+    .dataTables_filter input:focus,
+    .dataTables_length select:focus {
+      outline: none;
+      background-color: @focus;
+      color: @black;
+    }
+
+    .dataTables_info,
+    .dataTables_length,
+    .dataTables_filter,
+    .dataTables_paginate {
+      color: @primaryColor;
+    }
+
+    .dataTables_info {
+      border: 1px solid @extraTrim;
+    }
+
+    .cancel-search {
+      border: 1px solid @extraTrim;
+    }
+}
+
+/*  Striping  */
+
+.dataTables_wrapper .dataTable tbody tr.odd {
+  background-color: @white;
+}
+
+.dataTables_wrapper .dataTable tbody tr.even {
+  background-color: @stripingColor;
+}
+
+/*  Sorting  */
+
+
+.svg {
+
+  .sorting { }
+
+  .sorting_asc,
+  .sorting_asc_disabled {
+    background: transparent url(../img/svg/white/sort_asc.svg) 96% center no-repeat;
+    background-size: 20px 15px;
+  }
+
+  .sorting_desc,
+  .sorting_desc_disabled { 
+    background: transparent url(../img/svg/white/sort_desc.svg) 96% center no-repeat;
+    background-size: 20px 15px;
+  }
+
+  .sorting_asc,
+  .sorting_desc {
+    background-color: @primaryColor !important;
+    border-top: 1px solid @primaryColor !important;
+    border-bottom: 1px solid @primaryColor !important;
+    color: @white !important;
+  }
+
+  .sorting_asc_disabled,
+  .sorting_desc_disabled {
+    opacity: .20;
+  }
+}
+
+.dont-use-svg,
+.no-svg {
+
+  .sorting { }
+
+  .sorting_asc,
+  .sorting_asc_disabled {
+    background: transparent url(../img/white/up.png) no-repeat center right;
+  }
+
+  .sorting_desc,
+  .sorting_desc_disabled { 
+     background: url(../img/white/down.png) no-repeat center right;
+  }
+
+  .sorting_asc_disabled,
+  .sorting_desc_disabled {
+    opacity: .20;
+  }
+
+  .sorting_asc,
+  .sorting_desc {
+    background-color: @secondaryColor !important;
+    border-top: 1px solid @secondaryColor !important;
+    border-bottom: 1px solid @secondaryColor !important;
+    color: @white !important;
+  }
+}
+/*   Paging   */
+
+.paging_full_numbers {
+
+  a.paginate_button,
+  a.paginate_active {
+    border: 1px solid @extraTrim;
+    color: @primaryColor;
+  }
+
+  a.paginate_button {
+    background-color: @primaryColor;
+    color: @black;
+  }
+
+  a.paginate_button:hover {
+    background-color: @primaryColor;
+    border: 1px solid @primaryColor;
+    color: @white;
+    text-decoration: none !important;
+  }
+
+  a.paginate_active {
+    background-color: @primaryColor;
+    border: 1px solid @primaryColor;
+    color: @white !important;
+  }
+
+  a.first.paginate_button,
+  a.first.paginate_button_disabled,
+  a.first.paginate_button:hover,
+  a.last.paginate_button,
+  a.last.paginate_button_disabled,
+  a.last.paginate_button:hover,
+  a.previous.paginate_button,
+  a.previous.paginate_button_disabled,
+  a.previous.paginate_button:hover,
+  a.next.paginate_button,
+  a.next.paginate_button_disabled,
+  a.next.paginate_button:hover {    
+    border: 1px solid @extraTrim;
+  }
+
+  a.first.paginate_button:hover,
+  a.last.paginate_button:hover,
+  a.previous.paginate_button:hover,
+  a.next.paginate_button:hover { 
+      background-color: @trimColor;
+      border: 1px solid @trimColor;
+  }
+
+  span  {
+
+    a.paginate_active {
+      border: 1px solid @primaryColor;
+      color: @white !important;   
+    } 
+
+    a.paginate_button {
+      background-color: @bgColor;
+      border: 1px solid @trimColor;
+      color: @black !important;  
+    }   
+
+    a.paginate_button:hover { 
+      background-color: @trimColor;      
+      border: 1px solid @trimColor; 
+      color: @white !important;   
+    }
+  }
+
+}
+

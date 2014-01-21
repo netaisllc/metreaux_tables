@@ -1,0 +1,472 @@
+/**
+ *  METREAUX TABLE . CSS
+ *
+ * Use:
+ *     Style overrides for Datatables.net to bring about a UI treatment
+ *     inspired by Windows 8 (formerly 'Metro UI')
+ *
+ *  Versions:
+ *      0.1 -- 06-December-2013
+ *    
+ */
+
+/**
+ *  LESS Constants
+ *  
+ */
+
+@fontFamily:    'Open Sans', Helvetica, Arial, sans-serif;
+
+@bgColor:         rgba(255,255,255, 1.0);
+@primaryColor:    rgb(255,255,255);
+@secondaryColor:  rgb(0,0,0);
+@trimColor:       #888888;
+@stripingColor:   rgba(199,199,199, .2);
+
+@white:           #FFFFFF;
+@black:           #000000;
+@extraTrim:       #DADADA;
+@selection:       #FFFCE1; 
+@focus:           #FFFACD; 
+
+
+
+/**
+ *  DATA_TABLES.NET Overrides for Metreaux
+ *  
+ *  Note: these CSS rules *must* follow the default rules provided by the
+ *  Plugin, jQuery.Datatables.
+ *  
+ */
+
+.dataTables_wrapper {
+  font-size: .90em;
+}
+
+.dataTable {
+  border-bottom: 1px solid rgb(243, 243, 243);
+}
+
+.dataTables_length, .dataTables_filter {
+  margin-bottom: 1.0em;
+  position: relative;
+}
+
+.dataTables_filter input,
+.dataTables_length select {
+  background-color: #fff;
+  border: 1px solid #DADADA;
+  color: #49504F;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: .90em;
+  height: 34px;
+  padding-left: 5px;
+}
+
+.dataTables_filter input:focus,
+.dataTables_length select:focus {
+  background-color: @focus;
+}
+
+.dataTable thead tr {
+  height: 2.0em;
+  border-bottom: 1px solid rgb(243, 243, 243);
+  border-top: 1px solid rgb(243, 243, 243);
+}
+
+.dataTables_wrapper .dataTable thead th {
+  border-bottom: 0;
+  color: #333;
+  font-size: .80em;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.dataTables_wrapper .dataTable thead th.align-text.right {
+    text-align: center;
+}
+
+.dataTables_wrapper .dataTable tbody tr.odd,
+.dataTables_wrapper .dataTable tbody tr.even {
+  color: #111;
+  height: 2.0em; 
+}
+
+/*  Striping  ================================================================*/
+.dataTables_wrapper .dataTable tbody tr.odd {
+  background-color: #fff;
+  background-color: rgb(255, 255, 255);
+}
+
+.dataTables_wrapper .dataTable tbody tr.even {
+  background-color: #9FD074;
+  background-color: rgba(199,199,199, .20);
+}
+
+/*   Sorting   ===============================================================*/
+table.dataTable tr.odd td.sorting_1 { background-color:  rgba(159,159,159, .15); }
+table.dataTable tr.even td.sorting_1 { background-color: rgba(159,159,159, .25); }
+
+table.dataTable tr.odd td.sorting_2 { background-color:  rgba(159,159,159, .10); }
+table.dataTable tr.even td.sorting_2 { background-color: rgba(159,159,159, .20); }
+
+table.dataTable tr.odd td.sorting_3 { background-color:  rgba(159,159,159, .05); }
+table.dataTable tr.even td.sorting_3 { background-color: rgba(159,159,159, .10); }
+
+.svg {
+
+  .sorting { }
+
+  .sorting_asc,
+  .sorting_asc_disabled {
+    background: transparent url(../img/svg/black/sort_asc.svg) 96% center no-repeat;
+    background-size: 20px 15px;
+  }
+
+  .sorting_desc,
+  .sorting_desc_disabled { 
+    background: transparent url(../img/svg/black/sort_desc.svg) 96% center no-repeat;
+    background-size: 20px 15px;
+  }
+
+  .sorting_asc,
+  .sorting_desc {
+    background-color: @secondaryColor !important;
+    border-top: 1px solid @secondaryColor !important;
+    border-bottom: 1px solid @secondaryColor !important;
+    color: @white !important;
+  }
+
+  .sorting_asc_disabled,
+  .sorting_desc_disabled {
+    opacity: .20;
+  }
+}
+
+.dont-use-svg,
+.no-svg {
+
+  .sorting { }
+
+  .sorting_asc,
+  .sorting_asc_disabled {
+    background: transparent url(../img/white/up.png) no-repeat center right;
+  }
+
+  .sorting_desc,
+  .sorting_desc_disabled { 
+     background: url(../img/white/down.png) no-repeat center right;
+  }
+
+  .sorting_asc_disabled,
+  .sorting_desc_disabled {
+    opacity: .20;
+  }
+
+  .sorting_asc,
+  .sorting_desc {
+    background-color: @secondaryColor !important;
+    border-top: 1px solid @secondaryColor !important;
+    border-bottom: 1px solid @secondaryColor !important;
+    color: @white !important;
+  }
+}
+
+/* ===   MISC   ============================================================= */
+ 
+table.dataTable thead th:active,
+table.dataTable thead td:active {
+  outline: none;
+}
+
+.dataTables_wrapper .dataTable tbody tr td {
+  font-size: .80em;
+  vertical-align: middle;
+}
+
+.dataTables_info {
+   margin: 1.5em 0;
+   height: 33px;   
+}
+
+.dataTables_paginate {
+  margin: 1.0em 0; 
+}
+
+.dataTables_info,
+.dataTables_paginate.paging_two_button a {
+  line-height: 1.5em;
+}
+
+.dataTables_info {
+  border: 1px solid #DADADA;  
+  padding: 0 .50em;
+}
+
+
+/*  Pagination  ==============================================================*/
+
+/*  Two button pagination - [Previous] / [Next] */
+.svg {
+
+  .paginate_disabled_previous,
+  .paginate_disabled_next {
+    opacity: .30;
+  }
+
+  .paginate_disabled_previous,
+  .paginate_enabled_previous,
+  .paginate_disabled_next,
+  .paginate_enabled_next {  
+    height: 32px;
+    width: 40px;
+  }
+
+  .paginate_enabled_previous,
+  .paginate_enabled_previous:hover,
+  .paginate_disabled_previous {
+    background: url(../img/svg/black/arrow.left.circle.svg) no-repeat 100% 50%;
+    background-size: 30px 40px;
+    padding: 0;
+  }
+
+  .paginate_enabled_next,
+  .paginate_enabled_next:hover,
+  .paginate_disabled_next { 
+    background: url(../img/svg/black/arrow.right.circle.svg) no-repeat 100% 50%;
+    background-size: 30px 40px;
+    padding: 0;
+  }
+
+  .paginate_enabled_previous:hover {
+    background: url(../img/svg/black/arrow.left.circle.filled.svg) no-repeat 100% 50%;
+    background-size: 32px 42px;
+  }
+
+  .paginate_enabled_next:hover { 
+      background: url(../img/svg/black/arrow.right.circle.filled.svg) no-repeat 100% 50%;
+      background-size: 32px 42px;  
+  }
+}
+
+.dont-use-svg,
+.no-svg {
+
+  .paginate_disabled_previous,
+  .paginate_disabled_next {
+    opacity: .30;
+  }
+
+  .paginate_disabled_previous,
+  .paginate_enabled_previous,
+  .paginate_disabled_next,
+  .paginate_enabled_next {  
+    height: 32px;
+    width: 40px;
+  }
+
+  .paginate_enabled_previous,
+  .paginate_enabled_previous:hover,
+  .paginate_disabled_previous { 
+    background: url(../img/black/arrow.left.circle.png) no-repeat 5% 0%;
+    background-size: 32px 32px;
+    padding: 0;
+  }
+
+  .paginate_enabled_next,
+  .paginate_enabled_next:hover,
+  .paginate_disabled_next { 
+    background: url(../img/black/arrow.right.circle.png) no-repeat 95% 0%;
+    background-size: 32px 32px;
+    padding: 0;
+  }
+
+  .paginate_enabled_previous:hover {
+    background: url(../img/black/arrow.left.circle.filled.png) no-repeat 5% 0%;
+    background-size: 32px 32px;
+  }
+
+  .paginate_enabled_next:hover { 
+    background: url(../img/black/arrow.right.circle.filled.png) no-repeat 95% 0%;
+    background-size: 32px 32px;
+  }
+}
+
+/*    Full number pagination    */
+.paging_full_numbers {
+
+  a:active {
+    outline: none;
+  }
+
+  a:hover {
+    text-decoration: none;    
+  }
+
+  a,
+  a.paginate_button,
+  a.paginate_active {
+    height: 32px;
+    width: 32px;
+  }
+
+  a,
+  a.paginate_button,
+  a.paginate_active {
+    display: inline;
+  }
+
+  a.paginate_button,
+  a.paginate_active {
+    border: 1px solid #d3d3d3;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    padding: 2px 5px;
+    margin: 0 3px;
+    cursor: pointer;
+    *cursor: hand;
+    color: #333;
+  }
+
+  a.paginate_button {
+    background-color: #FFFFFF;
+  }
+
+  a.paginate_button:hover {
+    background-color: #DDDDDD;
+    text-decoration: none !important;
+  }
+
+  a.paginate_active {
+    background-color: #000;
+    color: #FFF !important;
+  }
+
+  a.first.paginate_button,
+  a.first.paginate_button_disabled,
+  a.first.paginate_button:hover,
+  a.last.paginate_button,
+  a.last.paginate_button_disabled,
+  a.last.paginate_button:hover,
+  a.previous.paginate_button,
+  a.previous.paginate_button_disabled,
+  a.previous.paginate_button:hover,
+  a.next.paginate_button,
+  a.next.paginate_button_disabled,
+  a.next.paginate_button:hover {    
+    border: 1px solid #d3d3d3;
+    display:inline-block;
+    position: relative;
+    top: 9px
+  }
+
+  a.first.paginate_button,
+  a.first.paginate_button_disabled,
+  a.first.paginate_button:hover {
+    background: url('../img/svg/control.rewind.svg') no-repeat 50% 50%;
+    background-size: 32px 60px;
+  }
+
+  a.last.paginate_button,
+  a.last.paginate_button_disabled,
+  a.last.paginate_button:hover {
+    background: url('../img/svg/control.fastforward.svg') no-repeat 50% 50%;
+    background-size: 32px 60px;
+  }
+
+  a.previous.paginate_button,
+  a.previous.paginate_button_disabled,
+  a.previous.paginate_button:hover {
+    background: url('../img/svg/control.back.svg') no-repeat 50% 50%;
+    background-size: 24px 48px;
+  }
+
+  a.next.paginate_button,
+  a.next.paginate_button_disabled,
+  a.next.paginate_button:hover { 
+    background: url('../img/svg/control.forward.svg') no-repeat 50% 50%;
+    background-size: 24px 48px;
+  } 
+
+  a.first.paginate_button:hover,
+  a.last.paginate_button:hover,
+  a.previous.paginate_button:hover,
+  a.next.paginate_button:hover { 
+      background-color: #D3D3D3;
+  }
+
+  a.first.paginate_button_disabled,
+  a.last.paginate_button_disabled,
+  a.previous.paginate_button_disabled,
+  a.next.paginate_button_disabled {
+    opacity: .30;
+  }
+
+  a.first.paginate_button_disabled:hover,
+  a.last.paginate_button_disabled:hover,
+  a.previous.paginate_button_disabled:hover,
+  a.next.paginate_button_disabled:hover {
+    background-color: transparent;
+  }
+
+  span  {
+    height: 34px;
+
+    a.paginate_button,
+    a.paginate_active {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    a.paginate_active {      
+      border: 1px solid @secondaryColor;
+      color: @white !important;   
+    }
+
+    a.paginate_button {
+      background-color: @bgColor;
+      color: @black !important;  
+    }
+
+    a.paginate_button:hover { 
+      background-color: @trimColor;  
+      border: 1px solid @trimColor; 
+      color: @black !important;   
+    }
+  }
+}
+
+
+/*  Search / Filter  =========================================================*/
+.cancel-search {  
+  border: 1px solid #DADADA;
+  bottom: 0;
+  display: inline-block;
+  height: 34px;
+  position: absolute;
+  right: 0;
+  width: 34px;
+}
+
+.cancel-search:hover {
+  cursor: pointer;
+}
+
+.svg {
+
+  .cancel-search {
+    background: rgb(249, 249, 249) url(../img/svg/black/clear.boxed.svg) center center no-repeat;
+    background-size: 36px 36px;
+  }
+}
+
+.dont-use-svg,
+.no-svg {
+
+  .cancel-search {
+    background: rgb(249, 249, 249) url(../img/black/cancel.png) center center no-repeat;
+    background-size: 36px 36px;
+  }
+}
+    

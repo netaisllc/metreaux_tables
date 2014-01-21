@@ -1,0 +1,188 @@
+/**
+ *  METREAUX TABLE . CSS
+ *
+ *  Theme:
+ *     Yahoo - the color purple
+ *
+ *  Versions:
+ *     0.1 -- 06-December-2013 *    
+ */
+/**
+ *  LESS Constants
+ *  
+ */
+body {
+  background: rgba(255, 255, 255, 0.95) url(../img/yahoo.jpg) no-repeat top right;
+}
+body h1 {
+  color: #4101af;
+}
+body h3 {
+  color: black;
+}
+body .ui.entry {
+  color: #4101af;
+}
+body .ui.menu.horizontal li,
+body .ui.menu.horizontal li a {
+  color: #4101af;
+  text-decoration: none;
+}
+body .ui.menu.horizontal li:hover,
+body .ui.menu.horizontal li a:hover {
+  background-color: #4101af;
+  color: white;
+}
+body .ui.menu.horizontal li.selected,
+body .ui.menu.horizontal li.selected a {
+  background-color: #4101af;
+  color: white;
+}
+body .dataTable {
+  border-bottom: 1px solid #f3f3f3;
+}
+body .dataTable thead tr {
+  border-bottom: 1px solid #f3f3f3;
+  border-top: 1px solid #f3f3f3;
+}
+body .dataTables_wrapper .dataTable thead th {
+  background-color: white;
+  color: #4101af;
+}
+body .dataTables_filter input,
+body .dataTables_length select {
+  border: 1px solid #d098fd;
+  color: black;
+}
+body .dataTables_filter input:focus,
+body .dataTables_length select:focus {
+  outline: none;
+  background-color: lemonchiffon;
+}
+body .dataTables_info,
+body .dataTables_length,
+body .dataTables_filter,
+body .dataTables_paginate {
+  color: black;
+}
+body .dataTables_info {
+  border: 1px solid #d098fd;
+}
+body .cancel-search {
+  border: 1px solid #d098fd;
+}
+/*  Striping  */
+
+.dataTables_wrapper .dataTable tbody tr.odd {
+  background-color: white;
+}
+.dataTables_wrapper .dataTable tbody tr.even {
+  background-color: rgba(208, 152, 253, 0.4);
+}
+/*  Sorting  */
+
+.svg .sorting_asc,
+.svg .sorting_asc_disabled {
+  background: transparent url(../img/svg/white/sort_asc.svg) 96% center no-repeat;
+  background-size: 20px 15px;
+}
+.svg .sorting_desc,
+.svg .sorting_desc_disabled {
+  background: transparent url(../img/svg/white/sort_desc.svg) 96% center no-repeat;
+  background-size: 20px 15px;
+}
+.svg .sorting_asc,
+.svg .sorting_desc {
+  background-color: #4101af !important;
+  border-top: 1px solid #4101af !important;
+  border-bottom: 1px solid #4101af !important;
+  color: white !important;
+}
+.svg .sorting_asc_disabled,
+.svg .sorting_desc_disabled {
+  opacity: .20;
+}
+.dont-use-svg .sorting_asc,
+.no-svg .sorting_asc,
+.dont-use-svg .sorting_asc_disabled,
+.no-svg .sorting_asc_disabled {
+  background: transparent url(../img/white/up.png) no-repeat center right;
+}
+.dont-use-svg .sorting_desc,
+.no-svg .sorting_desc,
+.dont-use-svg .sorting_desc_disabled,
+.no-svg .sorting_desc_disabled {
+  background: url(../img/white/down.png) no-repeat center right;
+}
+.dont-use-svg .sorting_asc_disabled,
+.no-svg .sorting_asc_disabled,
+.dont-use-svg .sorting_desc_disabled,
+.no-svg .sorting_desc_disabled {
+  opacity: .20;
+}
+.dont-use-svg .sorting_asc,
+.no-svg .sorting_asc,
+.dont-use-svg .sorting_desc,
+.no-svg .sorting_desc {
+  background-color: #4101af !important;
+  border-top: 1px solid #4101af !important;
+  border-bottom: 1px solid #4101af !important;
+  color: white !important;
+}
+/*   Paging   */
+
+.paging_full_numbers a.paginate_button,
+.paging_full_numbers a.paginate_active {
+  border: 1px solid #d098fd;
+  color: #4101af;
+}
+.paging_full_numbers a.paginate_button {
+  background-color: #4101af;
+  color: black;
+}
+.paging_full_numbers a.paginate_button:hover {
+  background-color: #4101af;
+  border: 1px solid #4101af;
+  color: white;
+  text-decoration: none !important;
+}
+.paging_full_numbers a.paginate_active {
+  background-color: #4101af;
+  border: 1px solid #4101af;
+  color: white !important;
+}
+.paging_full_numbers a.first.paginate_button,
+.paging_full_numbers a.first.paginate_button_disabled,
+.paging_full_numbers a.first.paginate_button:hover,
+.paging_full_numbers a.last.paginate_button,
+.paging_full_numbers a.last.paginate_button_disabled,
+.paging_full_numbers a.last.paginate_button:hover,
+.paging_full_numbers a.previous.paginate_button,
+.paging_full_numbers a.previous.paginate_button_disabled,
+.paging_full_numbers a.previous.paginate_button:hover,
+.paging_full_numbers a.next.paginate_button,
+.paging_full_numbers a.next.paginate_button_disabled,
+.paging_full_numbers a.next.paginate_button:hover {
+  border: 1px solid #d098fd;
+}
+.paging_full_numbers a.first.paginate_button:hover,
+.paging_full_numbers a.last.paginate_button:hover,
+.paging_full_numbers a.previous.paginate_button:hover,
+.paging_full_numbers a.next.paginate_button:hover {
+  background-color: rgba(208, 152, 253, 0.4);
+  border: 1px solid rgba(208, 152, 253, 0.4);
+}
+.paging_full_numbers span a.paginate_active {
+  border: 1px solid #4101af;
+  color: white !important;
+}
+.paging_full_numbers span a.paginate_button {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #d098fd;
+  color: black !important;
+}
+.paging_full_numbers span a.paginate_button:hover {
+  background-color: rgba(208, 152, 253, 0.4);
+  border: 1px solid rgba(208, 152, 253, 0.4);
+  color: black !important;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+    <!-- // Load custom build of feature detector -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Metreaux skin for DataTables.net</title>
+
+    <!-- FONT calls -->    
+
+    <!--   CSS: Reset   -->
+    <link rel="stylesheet" href="css/html5reset.css" />
+    
+    <!--   CSS: Application   -->
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/jquery.dataTables.css" /> 
+    <link rel="stylesheet" href="css/metreaux.css" />  
+    <link rel="stylesheet" href="css/metreaux-table.css" />
+    <link rel="stylesheet" href="css/metreaux-table-theme-default.css" />
+
+    <!-- CSS: Local   -->
+    <!-- These style rules are only for the demo table -->
+    <style>    
+    .width.team {
+        min-width: 150px;
+    }
+    .width.record,
+    .width.division {
+        min-width: 100px;
+    }
+    .winner {
+        color: #000;
+        font-weight: 700;
+    }
+    footer a {
+        background-color: #555;
+        border-radius: 3px;
+        color: #eee;
+        display: block;
+        font-size: .60em;
+        margin: 5% 7%;
+        padding: 10px;
+        width: 7.5%;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    </style>    
+</head>
+
+<body>
+    <div class="page" id="js-page">
+        <!--   PAGE HEADING   -->
+        <header>
+        </header>        
+
+        <!--   PAGE CONTENT  -->
+        <section class="headlines" id="js-headlines">
+             <h1>My Table is So Metreaux</h1>
+             <h3>A UI theme for the jQuery plugin, Datatables, inspired by Windows 8</h3>
+        </section>
+
+        <section class="features" id="js-features">
+            <ul class="ui menu horizontal" id="themes">
+                <li class="selected"><a href="#" rel="metreaux-table-theme-default">Default</a></li>
+                <li><a href="#" rel="metreaux-table-theme-tealy">Tealy</a></li>
+                <li><a href="#" rel="metreaux-table-theme-yahoo">Yahoo</a></li>                
+                <li><a href="#" rel="metreaux-table-theme-solarized-dark">Solarized Dark</a></li>
+                <li><a href="#" rel="metreaux-table-theme-solarized-light">Solarized Light</a></li>
+            </ul>
+        </section>       
+            
+        <section class="details">
+            <section>
+                <table id="js-table">
+                    <thead>
+                        <tr>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>          
+        </section>
+
+        <!--   PAGE FOOTING   -->
+        <footer class="clear">
+            <a id="js-toggle" href="#">Toggle pagination</a>
+        </footer>
+
+    </div>
+    
+    <!--   ===   LIBRARIES   =================================================================================================   -->
+    <!--   ===   Jquery ( Required, but you can use a 1.XX version, too )  -->
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <!--   ===   Jquery Plugins  ( Required )  -->
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/jquery.dataTables.min.js"></script>
+    <!--   ===   Application ( Required )  -->
+    <script type="text/javascript" src="js/metreaux-table.js"></script>
+    <script type="text/javascript" src="js/demo-page-only.js"></script>
+</body>
+</html>

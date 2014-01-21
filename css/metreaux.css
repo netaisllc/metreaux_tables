@@ -1,0 +1,99 @@
+/**
+ *  METREAUX TABLE . CSS
+ *
+ * Use:
+ *     Style rules to bring about a UI treatment
+ *     inspired by Windows 8 (formerly 'Metro UI')
+ *
+ *  Versions:
+ *      0.1 -- 06-December-2013
+ *    
+ */
+
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
+/**
+ *  LESS Constants
+ *  
+ */
+/**
+ *  GLOBAL rules of appearance
+ *  
+ */
+
+html,
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
+  font-size: 16pt !important;
+}
+body {
+  background-color: white;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 16pt;
+}
+/**
+ *  HEADINGS
+ *  
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #111111;
+  font-weight: 300;
+}
+h1 {
+  font-size: 2em;
+  line-height: 1.85em;
+}
+h2 {
+  color: #333333;
+  font-size: 1.5em;
+  line-height: 1.25em;
+}
+h3 {
+  color: #888888;
+  font-size: 1.1em;
+  line-height: 1.1em;
+}
+h4 {
+  font-size: 1em;
+  font-weight: 400;
+}
+h5 {
+  font-size: .80em;
+  font-weight: 400;
+}
+h6 {
+  font-size: .75em;
+  font-weight: 400;
+}
+/**
+ *  INPUT Placeholders
+ *  
+ */
+
+::-webkit-input-placeholder {
+  font-style: italic;
+  font-size: .8em;
+  color: #d7d7d7;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-style: italic;
+  font-size: .8em;
+  color: #d7d7d7;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-style: italic;
+  font-size: .8em;
+  color: #d7d7d7;
+}
+:-ms-input-placeholder {
+  font-style: italic;
+  font-size: .8em;
+  color: #d7d7d7;
+}

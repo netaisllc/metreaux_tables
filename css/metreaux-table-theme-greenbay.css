@@ -1,0 +1,189 @@
+/**
+ *  METREAUX TABLE . CSS
+ *
+ *  Theme:
+ *     Green Bay Packers - a great original team of the NFL (USA), also the
+ *     color scheme of the now defunct Bentley High School :)
+ *
+ *  Versions:
+ *     0.1 -- 06-December-2013  
+ */
+/**
+ *  LESS Constants
+ *  
+ */
+/*#006400; /*rgb(25,48,40);*/
+body {
+  background: #e3e3e3 url(../img/grey_bg.jpg);
+}
+body h1 {
+  color: #1e4d2b;
+}
+body h3 {
+  color: #feb81c;
+}
+body .ui.entry {
+  color: black;
+}
+body .ui.menu.horizontal li,
+body .ui.menu.horizontal li a {
+  color: #1e4d2b;
+  text-decoration: none;
+}
+body .ui.menu.horizontal li:hover,
+body .ui.menu.horizontal li a:hover {
+  background-color: #feb81c;
+  color: #1e4d2b;
+}
+body .ui.menu.horizontal li.selected,
+body .ui.menu.horizontal li.selected a {
+  background-color: #1e4d2b;
+  color: white;
+}
+body .dataTable {
+  border-bottom: 1px solid #1e4d2b;
+}
+body .dataTable thead tr {
+  border-bottom: 1px solid #1e4d2b;
+  border-top: 1px solid #1e4d2b;
+}
+body .dataTables_wrapper .dataTable thead th {
+  background-color: #1e4d2b;
+  color: #feb81c;
+}
+body .dataTables_filter input,
+body .dataTables_length select {
+  border: 1px solid #1e4d2b;
+  color: #1e4d2b;
+}
+body .dataTables_filter input:focus,
+body .dataTables_length select:focus {
+  outline: none;
+  background-color: lemonchiffon;
+}
+body .dataTables_info,
+body .dataTables_length,
+body .dataTables_filter,
+body .dataTables_paginate {
+  color: #1e4d2b;
+}
+body .dataTables_info {
+  border: 1px solid #1e4d2b;
+}
+body .cancel-search {
+  border: 1px solid #1e4d2b;
+}
+/*  Striping  */
+
+.dataTables_wrapper .dataTable tbody tr.odd {
+  background-color: white;
+}
+.dataTables_wrapper .dataTable tbody tr.even {
+  background-color: #efefef;
+}
+/*  Sorting  */
+
+.svg .sorting_asc,
+.svg .sorting_asc_disabled {
+  background: transparent url(../img/svg/black/sort_asc.svg) 96% center no-repeat;
+  background-size: 20px 15px;
+}
+.svg .sorting_desc,
+.svg .sorting_desc_disabled {
+  background: transparent url(../img/svg/black/sort_desc.svg) 96% center no-repeat;
+  background-size: 20px 15px;
+}
+.svg .sorting_asc,
+.svg .sorting_desc {
+  background-color: #feb81c !important;
+  border-top: 1px solid #feb81c !important;
+  border-bottom: 1px solid #feb81c !important;
+  color: black !important;
+}
+.svg .sorting_asc_disabled,
+.svg .sorting_desc_disabled {
+  opacity: .20;
+}
+.dont-use-svg .sorting_asc,
+.no-svg .sorting_asc,
+.dont-use-svg .sorting_asc_disabled,
+.no-svg .sorting_asc_disabled {
+  background: transparent url(../img/black/up.png) no-repeat center right;
+}
+.dont-use-svg .sorting_desc,
+.no-svg .sorting_desc,
+.dont-use-svg .sorting_desc_disabled,
+.no-svg .sorting_desc_disabled {
+  background: url(../img/black/down.png) no-repeat center right;
+}
+.dont-use-svg .sorting_asc_disabled,
+.no-svg .sorting_asc_disabled,
+.dont-use-svg .sorting_desc_disabled,
+.no-svg .sorting_desc_disabled {
+  opacity: .20;
+}
+.dont-use-svg .sorting_asc,
+.no-svg .sorting_asc,
+.dont-use-svg .sorting_desc,
+.no-svg .sorting_desc {
+  background-color: #feb81c !important;
+  border-top: 1px solid #feb81c !important;
+  border-bottom: 1px solid #feb81c !important;
+  color: black !important;
+}
+/*   Paging   */
+
+.paging_full_numbers a.paginate_button,
+.paging_full_numbers a.paginate_active {
+  border: 1px solid #1e4d2b;
+  color: #1e4d2b;
+}
+.paging_full_numbers a.paginate_button {
+  background-color: transparent;
+  color: black;
+}
+.paging_full_numbers a.paginate_button:hover {
+  background-color: #feb81c;
+  border: 1px solid #feb81c;
+  color: black;
+  text-decoration: none !important;
+}
+.paging_full_numbers a.paginate_active {
+  background-color: #1e4d2b;
+  border: 1px solid #1e4d2b;
+  color: white !important;
+}
+.paging_full_numbers a.first.paginate_button,
+.paging_full_numbers a.first.paginate_button_disabled,
+.paging_full_numbers a.first.paginate_button:hover,
+.paging_full_numbers a.last.paginate_button,
+.paging_full_numbers a.last.paginate_button_disabled,
+.paging_full_numbers a.last.paginate_button:hover,
+.paging_full_numbers a.previous.paginate_button,
+.paging_full_numbers a.previous.paginate_button_disabled,
+.paging_full_numbers a.previous.paginate_button:hover,
+.paging_full_numbers a.next.paginate_button,
+.paging_full_numbers a.next.paginate_button_disabled,
+.paging_full_numbers a.next.paginate_button:hover {
+  border: 1px solid #1e4d2b;
+}
+.paging_full_numbers a.first.paginate_button:hover,
+.paging_full_numbers a.last.paginate_button:hover,
+.paging_full_numbers a.previous.paginate_button:hover,
+.paging_full_numbers a.next.paginate_button:hover {
+  background-color: #feb81c;
+  border: 1px solid #feb81c;
+}
+.paging_full_numbers span a.paginate_active {
+  border: 1px solid #1e4d2b;
+  color: white !important;
+}
+.paging_full_numbers span a.paginate_button {
+  background-color: #e3e3e3;
+  color: black !important;
+}
+.paging_full_numbers span a.paginate_button:hover {
+  background-color: #feb81c;
+  border: 1px solid #feb81c;
+  color: black !important;
+}

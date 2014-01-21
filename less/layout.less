@@ -1,0 +1,140 @@
+/**
+ *  LAYOUT   =================================================================== 
+ *
+ *  Use: 
+ *      General page layout rules.
+ *
+ *  Versions:
+ *      0.1 - 06-Dec-2013 
+ *
+ *   ===========================================================================  
+ */
+
+/**
+ *  LESS Constants
+ *  
+ */
+@phoneWidth:            320px;
+@padWidthPortrait:      768px;
+@padWidthLandscape:     1024px;
+
+/**
+ *  GLOBAL rules of layout
+ *  
+ */
+
+/**
+ *  Apply natural box layout model to all elements
+ *
+ */
+*,
+*:before, :before,
+*:after, :after {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  margin: 0px;
+  min-width: @phoneWidth;
+  padding: 0px;
+
+    .page {
+        left: 0;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        .details,
+        .features,
+        .headlines {
+            position: relative;
+            margin: 2em 3em 1em 5em;
+        }
+
+        .details {
+            margin-top: 1em;
+        }
+
+        .features {
+            margin-top: .75em;
+            margin-bottom: 1.5em;
+        }
+    }
+
+    .ui {
+    }
+
+    .ui.entry {
+        border-radius: 3px;
+        color: #000;
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
+        font-size: 16pt !important;
+        height: 32px;
+        padding: 3px;
+        width: 150px;
+    }
+
+    .ui.menu.horizontal {
+        margin-bottom: .75em;
+
+        li {
+            display: inline-block;
+            font-size: .90em;
+            font-weight: 300;
+            list-style: none;
+            margin: 0 .85em 0 0;
+            padding: 5px 10px;
+        }
+
+        li:hover {
+            color: #000;
+            cursor: pointer;
+            background-color: #dddddd;
+        }
+
+        li.selected {
+            background-color: #000;
+            color: #fff;
+        }
+    }
+}
+
+
+/**
+ *  UTILITY   
+ *  
+ */
+.clear {
+  clear: both;
+}
+
+.hidden {
+  display: none;
+}
+
+.align-text.right {
+  text-align: right;
+  padding-right: 15px;
+}
+
+.align-text.center {
+  text-align: center;
+}
+
+.nudge-left {
+  padding-left: 5px;
+}
+
+.nudge-right {
+  padding-right: 5px;
+}
+
+.ellips {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
