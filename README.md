@@ -70,7 +70,7 @@ The requirements for other software are as follows:
 ### SVG Images
 The project includes SVG images for the few visual elements used in a table's overall scaffolding. Fallback to plain-old-PNGs is provided for in the CSS.
 
-The force the use of PNGs, simply assing the class "dont-use-svg" on a higher level containing element relative to your table. Something like a containg DIV or SECTION of even the BODY tag will work just fine.
+To force the use of PNGs, simply assign the class "dont-use-svg" on a higher level containing element relative to your table. Something like a containg DIV or SECTION of even the BODY tag will work just fine.
 
 
 ## How to Implement
